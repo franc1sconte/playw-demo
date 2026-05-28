@@ -1,0 +1,22 @@
+{
+  "name": "playw-demo",
+  "version": "1.0.0",
+  "description": "A dummy rep",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franc1sconte/playw-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franc1sconte/playw-demo/issues"
+  },
+  "homepage": "https://github.com/franc1sconte/playw-demo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}
