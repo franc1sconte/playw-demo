@@ -1,0 +1,4 @@
+ID,EPICA,Titulo,Descripcion
+TC-HOME-001,HOME,Validar visibilidad de Saludo + Nombre + pregunta de introducción,
+TC-HOME-002,HOME,Validar visibilidad de cards de materia + redirección a la clase al clickear en c/u de las cards,
+TC-HOME-003,HOME,Visibilidad de los componentes de header y sideboard,

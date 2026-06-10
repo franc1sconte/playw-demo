@@ -12,7 +12,7 @@ Este repo usa arquitectura por capas estricta. Como generador, solo escribís en
 
 **Estructura de carpetas reales para specs:**
 - `tests/siglo/`
-- `tests/uni-desktop/`
+- `tests/tuni-desktop/`
 - `tests/tuni-mobile/`
 
 **Prohibido dentro de un spec (`.spec.ts`):**

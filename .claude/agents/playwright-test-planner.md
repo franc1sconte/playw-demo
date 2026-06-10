@@ -9,9 +9,9 @@ color: green
 ## Arquitectura del repositorio (guía para planificar)
 
 Este repo organiza los specs en:
-- `tests/siglo/` — suite Siglo
-- `tests/uni-desktop/` — suite Uni (desktop)
-- `tests/tuni-mobile/` — suite Tuni (mobile)
+- `docs/test-cases/siglo/` — suite Siglo
+- `docs/test-cases/uni-desktop/` — suite Tuni (desktop)
+- `docs/test-cases/tuni-mobile/` — suite Tuni (mobile)
 
 Al diseñar escenarios, cada scenario debe indicar en qué suite vive. Los planes se guardan en `specs/`.
 

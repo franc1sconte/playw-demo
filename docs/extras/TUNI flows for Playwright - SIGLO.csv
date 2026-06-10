@@ -1,0 +1,7 @@
+ID,EPICA,Titulo,Descripcion
+TC-SIGLO-001,Widget,"Redirección a TUNI desde botón ""Ir a TUNI"" del header","Validar redirección desde Canvas Internos al curso ""Introducción al Derecho"" usando el botón ""Ir a TUNI"" del header del widget hacia la URL general de cursos."
+TC-SIGLO-002,Widget,"Redirección a TUNI desde botón ""Ir a TUNI"" del header","Validar redirección desde Canvas Internos al curso ""Derecho Constitucional"" usando el botón ""Ir a TUNI"" del header del widget hacia la URL general de cursos."
+TC-SIGLO-003,Widget,Redirección a TUNI vía sugerencia del chat,"Validar redirección desde Canvas Internos usando el botón de sugerencia ""Ir a una clase en TUNI"" dentro del chat del widget hacia la URL específica del tutor del curso."
+TC-SIGLO-004,Widget,Redirección a TUNI vía sugerencia del chat,"Validar redirección desde Canvas Internos usando el botón de sugerencia ""Ir a una clase en TUNI"" dentro del chat del widget hacia la URL específica del tutor del curso."
+TC-SIGLO-005,Widget,Redirección a TUNI vía conversación en el chat,"Validar redirección mediante interacción conversacional natural escribiendo mensajes en el chat, confirmando que el chatbot reconoce el curso y permite disparar la redirección a la clase específica."
+TC-SIGLO-006,Widget,Redirección a TUNI vía conversación en el chat,"Validar redirección mediante interacción conversacional natural escribiendo mensajes en el chat, confirmando que el chatbot reconoce el curso y permite disparar la redirección a la clase específica."

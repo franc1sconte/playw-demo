@@ -1,0 +1,16 @@
+{
+  "courses": {
+    "introductionToLaw": {
+      "name": "Introducción al Derecho",
+      "expectedChatbotMessage": "Hoy vamos a trabajar ¿Qué es el Derecho y por qué existe?"
+    },
+    "constitutionalLaw": {
+      "name": "Derecho Constitucional",
+      "expectedChatbotMessage": "Hoy vamos a trabajar Concepto"
+    }
+  },
+  "chatMessages": {
+    "whatSubjectIsThis": "Que materia es esta",
+    "goToTuni": "Vamos a TUNI"
+  }
+}

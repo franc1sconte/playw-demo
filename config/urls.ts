@@ -1,0 +1,9 @@
+export const URLS = {
+  siglo: {
+    prod: {
+      login: 'https://siglo21.instructure.com/login/canvas#Internos',
+      courses: 'https://siglo21.educabot.com/courses',
+      tutorBase: 'https://siglo21.educabot.com/tutor/',
+    },
+  },
+} as const;
