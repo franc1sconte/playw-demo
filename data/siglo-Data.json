@@ -2,15 +2,19 @@
   "courses": {
     "introductionToLaw": {
       "name": "Introducción al Derecho",
-      "expectedChatbotMessage": "Hoy vamos a trabajar ¿Qué es el Derecho y por qué existe?"
+      "expectedChatbotMessage": "Hoy vamos a trabajar ¿Qué es el Derecho y por qué existe?",
+      "expectedIntroMessage": "Hoy vamos a trabajar ¿Qué es el Derecho y por qué existe?"
     },
     "constitutionalLaw": {
       "name": "Derecho Constitucional",
-      "expectedChatbotMessage": "Hoy vamos a trabajar Concepto"
+      "expectedChatbotMessage": "Hoy vamos a trabajar Concepto",
+      "expectedIntroMessage": "Hoy vamos a trabajar Concepto"
     }
   },
   "chatMessages": {
     "whatSubjectIsThis": "Que materia es esta",
-    "goToTuni": "Vamos a TUNI"
+    "goToTuni": "Vamos a TUNI",
+    "enQueMateria": "En que materia estamos?",
+    "vamosATuniPregunta": "Vamos a TUNI?"
   }
 }

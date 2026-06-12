@@ -1,17 +1,24 @@
 import { defineConfig, devices } from '@playwright/test';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+const TUNI_AUTH_FILE = join(__dirname, 'playwright/.auth/siglo-tuni.json');
+
+const envPath = join(__dirname, '.env');
+if (existsSync(envPath)) {
+  readFileSync(envPath, 'utf-8')
+    .split('\n')
+    .forEach(line => {
+      const match = line.trim().match(/^([^#=][^=]*)=(.*)$/);
+      if (match) process.env[match[1].trim()] ??= match[2].trim();
+    });
+}
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  globalSetup: './global-setup',
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -24,6 +31,10 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  expect: {
+    // OAuth redirect chains to siglo21.educabot.com can take several seconds.
+    timeout: 15000,
+  },
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
@@ -34,19 +45,32 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // Siglo suite requires pre-authenticated TUNI state (produced by globalSetup).
+    {
+      name: 'siglo',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: TUNI_AUTH_FILE,
+      },
+      testMatch: '**/tests/siglo/**/*.spec.ts',
+    },
+
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      testIgnore: '**/tests/siglo/**',
     },
 
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
+      testIgnore: '**/tests/siglo/**',
     },
 
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+      testIgnore: '**/tests/siglo/**',
     },
 
     /* Test against mobile viewports. */
