@@ -1,0 +1,5 @@
+ID,EPICA,Titulo,Descripcion
+TC-COURSES-001,Courses,Validar visiblidad de componentes,"Valida que sean visibles los componentes/cajas de ""Nombre de materia"" + ""Clase recomendada"" + ""Contenidos"" + ""Progreso de la materia"""
+TC-COURSES-002,Courses,"Validar componente de ""clase recomendada""","Valida que el texto dentro de este componente sea el correcto y además que el boton de ""Empezar a estudiar"" redirija a la clase que deberia."
+TC-COURSES-003,Courses,"Validar componente de ""Contenidos""","Que exista cada uno de los elementos de ""Modulo"" . Desplegar el modulo y que apoarezcan todas las unidades correspondientes de ese modulo. Validar tambien que exista barra de progreso del modulo y la cantidad de unidades es correcta."
+TC-COURSES-004,Courses,"Validar componente de ""Progreso de la materia"" y ""Esta semana""","Que aparezca un ""porcentaje"" de dominio, no importa cual. Que aparezcan las unidades con mayor progreso. En el box de ""Esta semana"" debe haber 3 variables de datos numericos: Clases realizadas, Horas estudiadas y Avance semanal."

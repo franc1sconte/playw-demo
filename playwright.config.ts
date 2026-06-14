@@ -56,21 +56,27 @@ export default defineConfig({
     },
 
     {
+      name: 'tuni-desktop',
+      use: { ...devices['Desktop Chrome'] },
+      testMatch: '**/tests/tuni-desktop/**/*.spec.ts',
+    },
+
+    {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-      testIgnore: '**/tests/siglo/**',
+      testIgnore: ['**/tests/siglo/**', '**/tests/tuni-desktop/**'],
     },
 
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
-      testIgnore: '**/tests/siglo/**',
+      testIgnore: ['**/tests/siglo/**', '**/tests/tuni-desktop/**'],
     },
 
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-      testIgnore: '**/tests/siglo/**',
+      testIgnore: ['**/tests/siglo/**', '**/tests/tuni-desktop/**'],
     },
 
     /* Test against mobile viewports. */

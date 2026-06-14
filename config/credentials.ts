@@ -11,7 +11,11 @@ function requireEnv(name: string): string {
 
 export const CREDENTIALS = {
   siglo: {
-    username: requireEnv('SIGLO_USERNAME'),
-    password: requireEnv('SIGLO_PASSWORD'),
+    username: requireEnv('PROD_SIGLO_USERNAME'),
+    password: requireEnv('PROD_SIGLO_PASSWORD'),
+  },
+  tuni: {
+    username: requireEnv('STAGING_TUNI_USERNAME'),
+    password: requireEnv('STAGING_TUNI_PASSWORD'),
   },
 } as const;

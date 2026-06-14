@@ -7,4 +7,10 @@ export const URLS = {
       tutorBase: 'https://siglo21.educabot.com/tutor/',
     },
   },
+  tuni: {
+    staging: {
+      login: 'https://tuni-ai-staging.pages.dev/login',
+      courses: 'https://tuni-ai-staging.pages.dev/courses',
+    },
+  },
 } as const;

@@ -1,0 +1,10 @@
+{
+  "courses": {
+    "introductionToLaw": {
+      "name": "Introducción al Derecho"
+    },
+    "constitutionalLaw": {
+      "name": "Derecho Constitucional"
+    }
+  }
+}

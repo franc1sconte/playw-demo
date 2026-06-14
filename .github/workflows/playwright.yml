@@ -1,9 +1,20 @@
 name: Playwright Tests
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      project:
+        description: 'Proyecto a ejecutar'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - siglo
+          - tuni-desktop
+      grep:
+        description: 'Filtrar tests por nombre (opcional)'
+        required: false
+        type: string
 jobs:
   test:
     timeout-minutes: 60
@@ -18,7 +29,20 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: |
+        ARGS=""
+        if [ "${{ inputs.project }}" != "all" ]; then
+          ARGS="$ARGS --project=${{ inputs.project }}"
+        fi
+        if [ -n "${{ inputs.grep }}" ]; then
+          ARGS="$ARGS --grep '${{ inputs.grep }}'"
+        fi
+        npx playwright test $ARGS
+      env:
+        PROD_SIGLO_USERNAME: ${{ secrets.PROD_SIGLO_USERNAME }}
+        PROD_SIGLO_PASSWORD: ${{ secrets.PROD_SIGLO_PASSWORD }}
+        STAGING_TUNI_USERNAME: ${{ secrets.STAGING_TUNI_USERNAME }}
+        STAGING_TUNI_PASSWORD: ${{ secrets.STAGING_TUNI_PASSWORD }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
