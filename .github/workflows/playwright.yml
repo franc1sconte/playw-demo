@@ -44,8 +44,9 @@ jobs:
         STAGING_TUNI_USERNAME: ${{ secrets.STAGING_TUNI_USERNAME }}
         STAGING_TUNI_PASSWORD: ${{ secrets.STAGING_TUNI_PASSWORD }}
     - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
+      if: always()
       with:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+        if-no-files-found: ignore
